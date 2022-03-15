@@ -1,0 +1,6 @@
+    @import "../../../assets/styles/navbar.scss";
+    @import "../../../assets/styles/footer.scss";
+    .container-fluid {
+        padding: 0px;
+        min-height: calc(100vh - $navbar-height - $footer-height);
+    }
