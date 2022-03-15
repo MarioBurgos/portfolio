@@ -1,4 +1,4 @@
-<div class="carousel shadow" [ngStyle]="{ 'min-height' : finalHeight }">
+<div class="carousel" [ngStyle]="{ 'min-height' : finalHeight }">
     <div class="carousel-btns">
         <i class="bi bi-chevron-left" (click)="setBack()"></i>
         <i class="bi bi-chevron-right" (click)="setNext()"></i>
@@ -14,7 +14,6 @@
     </div>
     <div class="carousel-steps">
         <div class="carousel-steps-step{{ currentPosition === item.id ? '-active' : '' }}" *ngFor="let item of items" (click)="setCurrentPosition(item.id)">
-
         </div>
     </div>
 </div>

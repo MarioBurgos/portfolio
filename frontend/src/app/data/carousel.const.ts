@@ -18,7 +18,7 @@ export const CAROUSEL_DATA_ITEMS: ICarouselItem[] = [
       second: 'blog',
     },
     subtitle: 'Aquí hay algunas entradas sobre todo aquello que me parece interesante compartir con vosotros',
-    link: '/',
+    link: '/blog',
     image: '../assets/portfolio/dashboard/carousel/costa.jpg',
   },
   {
