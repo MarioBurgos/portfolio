@@ -1,18 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RootLayoutComponent } from './layout/root-layout/root-layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: 'dashboard',
     pathMatch: 'full',
   },
   {
-    path: '',
-    component: RootLayoutComponent,
-    children: [
-      {
+
         path: '',
         loadChildren: () =>
           import('./modules/pages/pages.module').then((m) => m.PagesModule),
@@ -22,8 +18,7 @@ const routes: Routes = [
         redirectTo: 'dashboard',
         pathMatch: "full"
       },
-    ],
-  },
+
 ];
 
 @NgModule({

@@ -1,0 +1,13 @@
+@import "../../../../../assets/styles/footer.scss";
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: $footer-height+15;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    font-weight: 200;
+    p {
+        text-align: center;
+    }
+}

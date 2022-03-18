@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, Input, OnInit, Renderer2, ViewChildren } from '@angular/core';
 import { ICarouselItem } from './icarousel-item.metadata';
 
 @Component({
@@ -6,22 +6,16 @@ import { ICarouselItem } from './icarousel-item.metadata';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.scss'],
 })
-export class CarouselComponent implements OnInit {
-  /**
-   * Custom Properties
-   */
-  @Input() height = 600;
-  @Input() isFullScreen = false;
+export class CarouselComponent implements OnInit, AfterViewChecked {
+
   @Input() items: ICarouselItem[] = [];
 
   /**
    * Final Properties
    */
-  public finalHeight: string | number = 0;
   public currentPosition = 0;
 
-  constructor() {
-    this.finalHeight = this.isFullScreen ? '100vh' : `${this.height}px`;
+  constructor( ) {
   }
 
   ngOnInit(): void {
@@ -31,14 +25,21 @@ export class CarouselComponent implements OnInit {
     });
   }
 
+  ngAfterViewChecked(): void {
+  }
+
+ 
+
+
   setCurrentPosition(position: number) {
     this.currentPosition = position;
     this.items.find((item) => item.id === 0)!.marginLeft = -100 * position;
+    console.log(position);
   }
 
   setNext() {
     let finalPercentage = 0;
-    let nextPosition = this.currentPosition + 1;
+    let nextPosition = this.currentPosition+1;
 
     if (nextPosition <= this.items.length - 1) {
       finalPercentage = -100 * nextPosition;

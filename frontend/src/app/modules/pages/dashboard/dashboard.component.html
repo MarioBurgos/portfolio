@@ -1,7 +1,14 @@
-<div class="container pt-4">
+<div (scroll)="scrollTo()">
+    <app-navigation-bar></app-navigation-bar>
     <app-carousel [items]="carouselImages"></app-carousel>
-</div>
-<div class="container blank"></div>
-<div class="container">
-    <app-about></app-about>
+    <div class="blank"></div>
+    <div id="about" class="container-fluid bg-light text-black-50 my-5">
+        <app-about></app-about>
+    </div>
+    <div class="blank"></div>
+    <div id="projects" class="bg-dark py-5">
+        <app-projects></app-projects>
+
+    </div>
+    <app-footer></app-footer>
 </div>

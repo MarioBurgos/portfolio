@@ -7,6 +7,7 @@ export interface ICarouselItem {
   subtitle?: string;
   link?: string;
   image: string;
+  svg: string;
   order?: number;
   marginLeft?: number;
 }
