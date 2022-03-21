@@ -1,17 +1,19 @@
 <div (scroll)="scrollTo()">
 
     <app-navigation-bar></app-navigation-bar>
-    <app-curtains></app-curtains>
+    <app-curtains id="curtains-section"></app-curtains>
     <div class="blank"></div>
-    <app-carousel [items]="carouselImages"></app-carousel>
+    <app-carousel [items]="carouselImages" id="carousel-section"></app-carousel>
     <div class="blank"></div>
-    <div id="about" class="container-fluid bg-light text-black-50 my-5">
+    <div class="container rounded bg-black p-2" id="blog-section">
+        <app-blog></app-blog>
+    </div>
+    <div id="about-section" class="container-fluid bg-light text-black-50 my-5">
         <app-about></app-about>
     </div>
     <div class="blank"></div>
-    <div id="projects" class="bg-dark py-5">
+    <div id="projects-section" class="bg-dark py-5">
         <app-projects></app-projects>
-
     </div>
     <app-footer></app-footer>
 </div>
