@@ -1,11 +1,11 @@
-## Portfolio personal
+# Portfolio personal
 Hola! 
 
 Mi nombre es Mario y pretendo que este proyecto sirva de ventana al mundo de mis habilidades como desarrollador full stack.
 
 Lo estoy desarrollando utilizando el framework Angular y BS5 para el front end y el back está conseguido en Springboot, aunque también preveo incluir Nodejs/Expressjs y MongoDB para las aplicaciones más sencillas.
 
-# Instrucciones de uso:
+### Instrucciones de uso:
 Para ver la página puedes descargarte todo el proyecto mediante un cliente git, o entrar al enlace que amablemente GitHub me presta para alojarla:
 
 https://marioburgos.github.io/portfolio/
@@ -21,7 +21,7 @@ $ ng serve -o
 
 ...Y la magia sucederá.
 
-# (Acerca del back end...)
+### (Acerca del back end...)
 De momento está en desarrollo. Hasta que no haya construido el front end de la aplicación Pizza, no había pensado enzarzarme con ello, así que habrá que esperar...
 
 
