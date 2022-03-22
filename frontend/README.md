@@ -1,27 +1,31 @@
-# Frontend
+## Portfolio personal
+Hola! 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+Mi nombre es Mario y pretendo que este proyecto sirva de ventana al mundo de mis habilidades como desarrollador full stack.
 
-## Development server
+Lo estoy desarrollando utilizando el framework Angular y BS5 para el front end y el back está conseguido en Springboot, aunque también preveo incluir Nodejs/Expressjs y MongoDB para las aplicaciones más sencillas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Instrucciones de uso:
+Para ver la página puedes descargarte todo el proyecto mediante un cliente git, o entrar al enlace que amablemente GitHub me presta para alojarla:
 
-## Code scaffolding
+https://marioburgos.github.io/portfolio/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Si vas por la vía complicada y quieres tener el proyecto en tu euqipo, prueba metiendo en la terminal el comando para clonar:
+$ git clone https://github.com/MarioBurgos/portfolio
 
-## Build
+Luego tendrás que instalar las dependencias mediante:
+$ npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Y bueno, si no tienes Angular en tu equipo, instálalo y ya luego con la consola abierta en el directorio '/frontend' tendrás que meter la instrucción
+$ ng serve -o
 
-## Running unit tests
+...Y la magia sucederá.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# (Acerca del back end...)
+De momento está en desarrollo. Hasta que no haya construido el front end de la aplicación Pizza, no había pensado enzarzarme con ello, así que habrá que esperar...
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Bueno, espero que os guste.
 
-## Further help
+Paz
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
