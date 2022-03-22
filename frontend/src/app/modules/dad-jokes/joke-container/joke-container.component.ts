@@ -28,7 +28,8 @@ export class JokeContainerComponent implements AfterViewInit {
 
 
   getJoke() {
-    this.blobType = Math.floor(Math.random() * 4 + 1);
+    this.blobType++;
+    if (this.blobType > 4) this.blobType = 1;
     let random = Math.floor(Math.random() * 2 + 1);
     console.debug('random', random);
     if (random % 2 === 0) {
@@ -40,8 +41,6 @@ export class JokeContainerComponent implements AfterViewInit {
         .subscribe(data => this.joke = data);
       console.debug('joke', this.joke)
      }
-
-
   }
 
 }
