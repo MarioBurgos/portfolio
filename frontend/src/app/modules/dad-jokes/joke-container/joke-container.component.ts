@@ -12,11 +12,14 @@ import { DadJokeService } from 'src/app/services/dad-joke.service';
 export class JokeContainerComponent implements AfterViewInit {
 
   joke!: Ijoke;
+  blobType: number;
+
 
   constructor(
     private _dadJokeService: DadJokeService,
     private _chuckJokeService: ChuckJokeService) {
     this.joke = new DadJoke();
+    this.blobType = 1;
      }
 
   ngAfterViewInit(): void {
@@ -25,6 +28,7 @@ export class JokeContainerComponent implements AfterViewInit {
 
 
   getJoke() {
+    this.blobType = Math.floor(Math.random() * 4 + 1);
     let random = Math.floor(Math.random() * 2 + 1);
     console.debug('random', random);
     if (random % 2 === 0) {
