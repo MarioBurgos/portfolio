@@ -28,19 +28,21 @@ export class JokeContainerComponent implements AfterViewInit {
 
 
   getJoke() {
-    this.blobType++;
-    if (this.blobType > 4) this.blobType = 1;
+if (this.blobType >= 4) { this.blobType = 1 }
+    else {
+      this.blobType++;
+};
     let random = Math.floor(Math.random() * 2 + 1);
     console.debug('random', random);
     if (random % 2 === 0) {
       this._dadJokeService.getJoke()
         .subscribe(data => this.joke = data);
-      console.debug('joke', this.joke)
+      console.debug('joke', this.joke);
     } else {
       this._chuckJokeService.getJoke()
         .subscribe(data => this.joke = data);
-      console.debug('joke', this.joke)
-     }
+      console.debug('joke', this.joke);
+    }
   }
 
 }

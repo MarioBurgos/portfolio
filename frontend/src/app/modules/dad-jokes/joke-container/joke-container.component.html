@@ -1,11 +1,14 @@
 <div class="container-fluid">
-    <div class="col-xs-12 col-md-6 col-lg-4">
+    <h1 class="custom">JOKES!</h1>
+    <h2 class="custom small text-yellow">A collection of dad jokes and Chuck Norris jokes that will leave you a mark</h2>
+    <div class="col-xs-12 col-md-6 col-lg-2">
         <div class="blob" [ngClass]="'blob'+blobType">
-            <h5> {{joke.joke }} {{joke.value}}</h5>
-            <button class="btn btn-light" (click)="getJoke()">
+            <p class="w-lg-25"> {{joke.joke }} {{joke.value}}</p>
+            <button class="btn btn-warning" (click)="getJoke()">
               Get a Joke
             </button>
         </div>
     </div>
+
 
 </div>
