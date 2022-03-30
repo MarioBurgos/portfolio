@@ -25,7 +25,7 @@
     position: fixed;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.05);
-    bottom: -60px;
+    bottom: -65px;
     left: 0;
     right: 0;
     border-radius: 35px 35px 0 0;
@@ -33,10 +33,15 @@
     padding: 1rem;
     transition: bottom 0.5s;
     .btn {
-        width: 50px;
-        height: 50px;
-        border: 0px;
+        padding: 0;
+        width: 51px;
+        height: 51px;
+        border: none;
         border-radius: 50%;
+        text-align: center;
+        text-justify: auto;
+        font-size: 3rem;
+        line-height: 45px;
     }
 }
 
