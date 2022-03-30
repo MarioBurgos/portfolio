@@ -3,4 +3,7 @@ export interface Ijoke {
   joke: string;
   value: string;
   status: number;
+  rank: number;
+
+  setRank(n:number):void;
 }

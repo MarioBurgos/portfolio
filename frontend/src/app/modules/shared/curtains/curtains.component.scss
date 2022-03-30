@@ -21,7 +21,7 @@
                 animation: slide-in-up 1s;
             }
         }
-        
+
         @media (min-width:600px) {
             .barra {
                 height: 100vh;
@@ -42,13 +42,13 @@
                 animation: slide-in-left 1s;
             }
         }
-        
+
         .custom-container {
             display: flex;
             justify-content: space-between;
             padding: 0;
         }
-        
+
         .cortina {
             width: 100%;
             height: 100%;
@@ -59,12 +59,12 @@
             position: absolute;
             z-index: 1;
         }
-        
+
         .cortina:hover {
             transform: scale(2);
             transition: transform 1s;
         }
-        
+
         .barra {
             width: 100%;
             text-align: center;
@@ -84,41 +84,42 @@
                 text-decoration: none;
             }
         }
-        
+
         .barra:hover {
-            font-size: 3rem;
+            transition: font-size 0.1s;
+            font-size: 2.5rem;
         }
-        
+
         .barra:nth-child(1) {
             background: #244F75;
             animation-delay: .05;
             animation-fill-mode: backwards;
         }
-        
+
         .barra:nth-child(2) {
             background: #60BFBF;
             animation-delay: .2;
             animation-fill-mode: backwards;
         }
-        
+
         .barra:nth-child(3) {
             background: #8C4B7E;
             animation-delay: .4s;
             animation-fill-mode: backwards;
         }
-        
+
         .barra:nth-child(4) {
             background: #F8BB44;
             animation-delay: .6s;
             animation-fill-mode: backwards;
         }
-        
+
         .barra:nth-child(5) {
             background: #F24B4B;
             animation-delay: .8s;
             animation-fill-mode: backwards;
         }
-        
+
         @keyframes slide-in-right {
             0% {
                 -webkit-transform: translate3d(-100%, 0, 0);
@@ -129,7 +130,7 @@
                 transform: translate3d(0, 0, 0);
             }
         }
-        
+
         @keyframes slide-in-left {
             0% {
                 -webkit-transform: translate3d(100%, 0, 0);
@@ -140,7 +141,7 @@
                 transform: translate3d(0, 0, 0);
             }
         }
-        
+
         @keyframes slide-in-up {
             0% {
                 -webkit-transform: translate3d(0, 120%, 0);
@@ -151,7 +152,7 @@
                 transform: translate3d(0, 0, 0);
             }
         }
-        
+
         @keyframes slide-in-down {
             0% {
                 -webkit-transform: translate3d(0, -120%, 0);
