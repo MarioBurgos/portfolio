@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Ijoke } from 'src/app/interfaces/ijoke';
-import { DadJoke } from 'src/app/model/dad-joke';
+import { Joke } from 'src/app/model/joke';
 import { ChuckJokeService } from 'src/app/services/chuck-joke.service';
 import { DadJokeService } from 'src/app/services/dad-joke.service';
 import { RankingJokesService } from 'src/app/services/ranking-jokes.service';
@@ -20,13 +20,12 @@ export class JokeContainerComponent implements AfterViewInit {
     private _dadJokeService: DadJokeService,
     private _chuckJokeService: ChuckJokeService,
     private _rankingService: RankingJokesService) {
-    this.joke = new DadJoke();
+    this.joke = new Joke();
     this.blobType = 0;
     this.getJoke();
      }
 
   ngAfterViewInit(): void {
-    this.getJoke();
     this.btnDisabled = false;
   }
 
@@ -49,22 +48,22 @@ export class JokeContainerComponent implements AfterViewInit {
       this._dadJokeService.getJoke()
         .subscribe(data => {
           this.joke = this._rankingService.parametrizeJoke(data);
+
         });
     } else {
       this._chuckJokeService.getJoke()
         .subscribe(data =>
-          this.joke = this._rankingService.parametrizeJoke(data)
-        );
+        {
+          this.joke = this._rankingService.parametrizeJoke(data);
+        });
     }
-
-    this._rankingService.seTJoke(this.joke);
-    console.warn(this._rankingService.getJoke());
+ this._rankingService.seTJoke(this.joke);
     this.btnDisabled = false;
   }
 
   rateJoke(points: number) {
     this._rankingService.rankJoke(points);
-    console.log(this._rankingService.rankingJokes);
+    console.log('ranking',this._rankingService.rankingJokes);
     this.btnDisabled = true;
   }
 

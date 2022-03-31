@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Ijoke } from 'src/app/interfaces/ijoke';
+import { RankingJokesService } from 'src/app/services/ranking-jokes.service';
 
 @Component({
   selector: 'app-highlights',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HighlightsComponent implements OnInit {
 
-  constructor() { }
+  ranking: Array<Ijoke>;
+
+  constructor(private rankingService: RankingJokesService) {
+    this.ranking = new Array<Ijoke>();
+   }
+
+
 
   ngOnInit(): void {
+    this.ranking = this.rankingService.getRanking();
+    console.warn('ranking component', this.ranking)
+
   }
 
 }

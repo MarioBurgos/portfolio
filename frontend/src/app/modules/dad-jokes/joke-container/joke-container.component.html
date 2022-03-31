@@ -4,7 +4,6 @@
     <h2 class="custom custom-subtitle">A collection of dad jokes and Chuck Norris jokes that will leave you a mark</h2>
     <div class="container">
         <div id="blob" class="blob" [ngClass]="'blob'+blobType">
-
             <p> {{joke.joke }} {{joke.value}}</p>
             <button class="btn btn-warning" (click)="resetBlob();getJoke(); ">
               Get a Joke
@@ -13,6 +12,7 @@
     </div>
     <div>
     </div>
+    <app-highlights></app-highlights>
     <div class="rating-buttons"> <i class="bi bi-arrow-bar-up float-start"></i>
         <small class="rate-it">Rate it!</small>
         <button class="btn btn-outline-danger" (click)="rateJoke(0)" [disabled]="btnDisabled"><i class="bi bi-hand-thumbs-down-fill"></i></button>

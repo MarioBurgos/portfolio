@@ -1,12 +1,12 @@
-<div class="container">
-    <div class="row">
-
-        BEST JOKE
-        <div class="col-8 text-start">
-            this joke...
-        </div>
-        <div class="col-4 text-end">
-            6 points
-        </div>
+<div class="container m-0 mw-100 d-flex">
+    <div class="col-2">
+        Best Joke Ever
+    </div>
+    <div class="col-8 text-end">
+        <ng-container *ngIf="ranking[1].joke !== ''">{{ ranking[1].joke}}</ng-container>
+        <ng-container *ngIf="ranking[1].value !== ''">{{ ranking[1].value}}</ng-container>
+    </div>
+    <div class="col-1 text-end">
+        {{ranking[ranking.length-1].rank }} likes
     </div>
 </div>

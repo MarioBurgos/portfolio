@@ -1,6 +1,6 @@
 import { Ijoke } from "../interfaces/ijoke";
 
-export class ChuckJoke implements Ijoke {
+export class Joke implements Ijoke {
   id: string;
   joke: string;
   value: string;
