@@ -1,6 +1,7 @@
 <div class="container-fluid">
-    <h1 class="custom">JOKES!</h1>
-    <h2 class="custom small text-yellow">A collection of dad jokes and Chuck Norris jokes that will leave you a mark</h2>
+
+    <h1 class="custom custom-title">JOKES!</h1>
+    <h2 class="custom custom-subtitle">A collection of dad jokes and Chuck Norris jokes that will leave you a mark</h2>
     <div class="container">
         <div id="blob" class="blob" [ngClass]="'blob'+blobType">
 
@@ -10,11 +11,12 @@
             </button>
         </div>
     </div>
-    <div class="rating-buttons">
-        <button class="btn btn-outline-danger" (click)="rateJoke(0)" [disabled]="btnDisabled"><i class="bi bi-emoji-frown-fill"></i></button>
-        <button class="btn btn-outline-warning" (click)="rateJoke(1)" [disabled]="btnDisabled"><i class="bi bi-emoji-expressionless-fill"></i></button>
-        <button class="btn btn-outline-success" (click)="rateJoke(2)" [disabled]="btnDisabled"><i class="bi bi-emoji-smile-fill"></i></button>
-
+    <div>
     </div>
-
+    <div class="rating-buttons"> <i class="bi bi-arrow-bar-up float-start"></i>
+        <small class="rate-it">Rate it!</small>
+        <button class="btn btn-outline-danger" (click)="rateJoke(0)" [disabled]="btnDisabled"><i class="bi bi-hand-thumbs-down-fill"></i></button>
+        <button class="btn btn-outline-warning" (click)="rateJoke(1)" [disabled]="btnDisabled"><i class="bi bi-emoji-expressionless-fill"></i></button>
+        <button class="btn btn-outline-success" (click)="rateJoke(2)" [disabled]="btnDisabled"><i class="bi bi-hand-thumbs-up-fill"></i></button>
+    </div>
 </div>

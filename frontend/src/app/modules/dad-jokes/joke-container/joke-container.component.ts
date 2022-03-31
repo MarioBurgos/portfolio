@@ -47,12 +47,16 @@ export class JokeContainerComponent implements AfterViewInit {
     let random = Math.floor(Math.random() * 2 + 1);
     if (random % 2 === 0) {
       this._dadJokeService.getJoke()
-        .subscribe(data => this.joke = data);
+        .subscribe(data => {
+          this.joke = this._rankingService.parametrizeJoke(data);
+        });
     } else {
       this._chuckJokeService.getJoke()
-        .subscribe(data => this.joke = data);
+        .subscribe(data =>
+          this.joke = this._rankingService.parametrizeJoke(data)
+        );
     }
-    this.joke = this._rankingService.parametrizeJoke(this.joke);
+
     this._rankingService.seTJoke(this.joke);
     console.warn(this._rankingService.getJoke());
     this.btnDisabled = false;
