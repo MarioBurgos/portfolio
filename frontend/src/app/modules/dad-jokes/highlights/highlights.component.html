@@ -1,12 +1,22 @@
-<div class="container m-0 mw-100 d-flex">
-    <div class="col-2">
-        Best Joke Ever
-    </div>
-    <div class="col-8 text-end">
-        <ng-container *ngIf="ranking[1].joke !== ''">{{ ranking[1].joke}}</ng-container>
-        <ng-container *ngIf="ranking[1].value !== ''">{{ ranking[1].value}}</ng-container>
-    </div>
-    <div class="col-1 text-end">
-        {{ranking[ranking.length-1].rank }} likes
-    </div>
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Top</th>
+                <th scope="col">Likes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of ranking.slice().reverse()">
+                <th scope="row">
+                    <ng-container *ngIf="item.joke !== ''">{{ item.joke}}</ng-container>
+                    <ng-container *ngIf="item.value !== ''">{{ item.value}}</ng-container>
+                </th>
+                <th scope="row" class=""> {{item.rank }} likes</th>
+            </tr>
+        </tbody>
+    </table>
+
+
 </div>
