@@ -1,19 +1,22 @@
 <div class="container">
-
-    <table class="table">
-        <thead>
+    <table class="table table-hover">
+        <thead class="">
             <tr>
-                <th scope="col">Top</th>
-                <th scope="col">Likes</th>
+                <th>Top</th>
+                <th class=" col-1 text-end ">Likes</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let item of ranking.slice().reverse()">
-                <th scope="row">
-                    <ng-container *ngIf="item.joke !== ''">{{ item.joke}}</ng-container>
-                    <ng-container *ngIf="item.value !== ''">{{ item.value}}</ng-container>
-                </th>
-                <th scope="row" class=""> {{item.rank }} likes</th>
+                <ng-container *ngIf="item.joke !== undefined && item.rank > 0">
+                    <td>{{item.joke}}</td>
+                    <td>{{item.rank}}</td>
+                </ng-container>
+                <ng-container *ngIf="item.value !== undefined && item.rank > 0">
+                    <td>{{item.value}}</td>
+                    <td>{{item.rank}}</td>
+                </ng-container>
+
             </tr>
         </tbody>
     </table>
