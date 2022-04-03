@@ -31,8 +31,7 @@ export class JokeContainerComponent implements AfterViewInit {
 
   resetBlob() {
     let blob = <HTMLElement>document.getElementById('blob');
-    blob.classList.remove('blob');
-    blob.classList.add('blob')
+    blob.classList.add('fade-in')
 
   }
 
