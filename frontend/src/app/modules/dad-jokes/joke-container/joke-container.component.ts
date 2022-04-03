@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Ijoke } from 'src/app/interfaces/ijoke';
 import { Joke } from 'src/app/model/joke';
 import { ChuckJokeService } from 'src/app/services/chuck-joke.service';

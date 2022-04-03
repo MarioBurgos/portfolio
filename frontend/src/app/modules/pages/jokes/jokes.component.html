@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row">
-        <button class="btn btn-info text-white" (click)="toggleRank()">{{btnText}}</button>
+        <button class="btn btn-outline text-white" (click)="toggleRank()"><span>{{btnText}}</span></button>
         <ng-container *ngIf="showRank">
             <app-highlights></app-highlights>
         </ng-container>

@@ -22,7 +22,7 @@ export class RankingJokesService {
     return this.rankingJokes;
    }
   parametrizeJoke(joke: Ijoke): Ijoke {
-    console.error('parametrize param', joke)
+    console.warn('parametrize', joke)
     let j= new Joke();
       j.id = joke.id;
     j.joke = joke.joke;

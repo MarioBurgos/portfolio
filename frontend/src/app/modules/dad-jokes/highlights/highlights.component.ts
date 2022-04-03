@@ -20,7 +20,14 @@ export class HighlightsComponent implements OnInit {
   ngOnInit(): void {
     this.ranking = this.rankingService.getRanking();
     console.warn('ranking component', this.ranking)
+    this.isEmpty();
+  }
 
+  isEmpty() {
+    let empty;
+    empty = this.ranking.filter(item => item.rank > 0);
+    if (empty.length > 0) return true;
+    else return false;
   }
 
 }
