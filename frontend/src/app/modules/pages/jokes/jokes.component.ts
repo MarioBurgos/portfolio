@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JokesComponent implements OnInit {
 
+  showRank = false;
+  btnText = 'top jokes';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleRank() {
+    this.showRank = !this.showRank;
+    this.showRank ? this.btnText = 'Back to jokes' : this.btnText ='top jokes';
   }
 
 }

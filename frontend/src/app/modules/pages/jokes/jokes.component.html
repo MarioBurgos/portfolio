@@ -1,5 +1,14 @@
 <div class="container-fluid">
     <div class="row">
-        <app-joke-container>
-        </app-joke-container>
+        <button class="btn btn-info text-white" (click)="toggleRank()">{{btnText}}</button>
+        <ng-container *ngIf="showRank">
+            <app-highlights></app-highlights>
+        </ng-container>
+        <ng-container *ngIf="!showRank">
+            <app-joke-container>
+            </app-joke-container>
+        </ng-container>
+
+
+
     </div>

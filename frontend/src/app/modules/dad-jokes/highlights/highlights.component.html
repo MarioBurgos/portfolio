@@ -1,5 +1,5 @@
 <div class="container">
-    <table class="table table-hover">
+    <table class="table table-info table-striped table-hover">
         <thead class="">
             <tr>
                 <th>Top</th>
@@ -7,14 +7,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of ranking.slice().reverse()">
+            <tr *ngFor="let item of ranking.slice().reverse()" class="text-joke">
                 <ng-container *ngIf="item.joke !== undefined && item.rank > 0">
                     <td>{{item.joke}}</td>
-                    <td>{{item.rank}}</td>
+                    <td class="text-center">{{item.rank}}</td>
                 </ng-container>
                 <ng-container *ngIf="item.value !== undefined && item.rank > 0">
                     <td>{{item.value}}</td>
-                    <td>{{item.rank}}</td>
+                    <td class="text-center">{{item.rank}}</td>
                 </ng-container>
 
             </tr>
